@@ -22,6 +22,8 @@ html {
     --base-width-side-margin: 2rem;
 
     /* colors */
+    --color-black: #000;
+    --color-white: #fff;
     --color-primary: hsl(185, 75%, 39%);
     --color-primary-desaturated: hsl(229, 23%, 23%);
     --color-secondary: hsl(227, 10%, 46%);
@@ -100,12 +102,67 @@ body {
 }
 
 /**
- * Remove annoying empty space below inline-block elements.
+ * Tile Profile.
  */
-img,
-[style*='inline-block' i],
-svg,
-canvas,
-picture {
-    vertical-align: middle;
+:root {
+    --tile-profile-padding-top: 1rem;
+    --tile-profile-padding-right: 1rem;
+    --tile-profile-padding-bottom: 1rem;
+    --tile-profile-padding-left: 1rem;
+    --tile-profile__picture-size: 10.8rem;
+}
+
+.tile-profile {
+    overflow: hidden;
+    width: 35rem;
+    border-radius: 1.6rem;
+    text-align: center;
+}
+
+.tile-profile::before {
+    content: '';
+    display: block;
+    padding-top: calc(140 / 350 * 100%);
+    background-image: url(../../images/bg-pattern-card.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.tile-profile__picture {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 10.8rem;
+    width: var(--tile-profile__picture-size);
+    height: 10.8rem;
+    height: var(--tile-profile__picture-size);
+    margin-top: calc(10.8rem / -2);
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 6px #fff;
+}
+
+.tile-profile__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tile-profile__title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-100);
+}
+
+.tile-profile__subtitle {
+    margin-top: 1rem;
+    margin-bottom: 2.4rem;
+}
+
+.tile-profile__rule {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-color: solid 1px var(--color-secondary-neutral);
+}
+
+.tile-profile__meta {
 }

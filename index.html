@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <title>Frontend Mentor | Profile card component</title>
-    <link rel="stylesheet" href="/assets/libs/normalize/normalize.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/libs/normalize/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
@@ -24,16 +24,18 @@
 </head>
 <body>
 <main>
-    <section>
+    <section class="tile-profile">
         <header>
-            <img src="images/image-victor.jpg" alt="Prifle picture of Victor" width="96" height="96">
-            <h1>Victor Crest <span>26</span></h1>
-            <h2>London</h2>
+            <figure class="tile-profile__picture">
+                <img src="images/image-victor.jpg" alt="Prifle picture of Victor" width="96" height="96">
+            </figure>
+            <h1 class="tile-profile__title">Victor Crest <spa class="tile-profile__title-meta"n>26</span></h1>
+            <h2 class="tile-profile__subtitle">London</h2>
         </header>
 
-        <hr>
+        <hr class="tile-profile__rule">
 
-        <footer>
+        <footer class="tile-profile__meta">
             <ul>
                 <li>
                     <span>80K</span>
