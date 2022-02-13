@@ -81,7 +81,7 @@ li {
 }
 
 body {
-    font: 1.6rem 'Kumbh Sans';
+    font: 1.6rem/1.6 'Kumbh Sans';
     background-color: var(--color-primary);
     background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
     background-position: 0% 0%, 100% 100%;
@@ -190,4 +190,18 @@ body > main {
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
     border-top: solid 1px var(--color-secondary-neutral);
+}
+
+.meta-info {
+    font-size: var(--font-size-90);
+    color: var(--color-secondary);
+}
+
+.meta-info__title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: .4rem;
+    font-size: var(--font-size-100);
+    font-weight: 700;
+    color: var(--color-black);
 }
