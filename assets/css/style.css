@@ -84,7 +84,7 @@ body {
     font: 1.6rem/1.6 'Kumbh Sans';
     background-color: var(--color-primary);
     background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
-    background-position: 0% 0%, 100% 100%;
+    background-position: 0 0, 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -120,7 +120,7 @@ body > main {
     margin-left: auto;
 }
 
-@supports (color: var(--color)) {
+@supports (color: var(--color-white)) {
     .base-width {
         width: calc(100% - (2 * var(--base-width-side-margin)));
         max-width: var(--base-width-max-width);
@@ -192,6 +192,9 @@ body > main {
     border-top: solid 1px var(--color-secondary-neutral);
 }
 
+/**
+ * Meta info module.
+ */
 .meta-info {
     font-size: var(--font-size-90);
     color: var(--color-secondary);
@@ -204,4 +207,17 @@ body > main {
     font-size: var(--font-size-100);
     font-weight: 700;
     color: var(--color-black);
+}
+
+/**
+ * Meta list module.
+ */
+.meta-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.meta-list__item {
+    padding-right: .4rem;
+    padding-left: .4rem;
 }
