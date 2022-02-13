@@ -82,6 +82,32 @@ li {
 
 body {
     font: 1.6rem 'Kumbh Sans';
+    background-color: var(--color-primary);
+    background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
+    background-position: 0% 0%, 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/**
+ * Sticky footer.
+ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body > header,
+body > footer {
+    flex: 0 0 auto;
+}
+
+body > main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
 }
 
 /**
