@@ -23,7 +23,7 @@ html {
 
     /* colors */
     --color-black: #000;
-    --color-white: #fff;
+    --color-white: #FFF;
     --color-primary: hsl(185, 75%, 39%);
     --color-primary-desaturated: hsl(229, 23%, 23%);
     --color-secondary: hsl(227, 10%, 46%);
@@ -84,8 +84,14 @@ body {
     font: 1.6rem/1.6 'Kumbh Sans';
     background-color: var(--color-primary);
     background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
-    background-position: 0 0, 100% 100%;
+    background-position: -28.6rem -45.8rem, calc(100% + 24.8rem) calc(100% + 63.2rem);
     background-repeat: no-repeat;
+}
+
+@media (max-width: 375px) {
+    body {
+        background-position: -75rem -66rem, calc(100% + 77rem) calc(100% + 55rem);
+    }
 }
 
 /**
@@ -131,12 +137,21 @@ body > main {
  * Tile Profile.
  */
 :root {
+    --tile-profile-width: 35rem;
+    --tile-profile-header-aspec: calc(140 / 350 * 100%);
     --tile-profile__picture-size: 10.8rem;
+}
+
+@media (max-width: 375px) {
+    :root {
+        --tile-profile-width: 100%;
+        --tile-profile-header-aspec: calc(140 / 326 * 100%);
+    }
 }
 
 .tile-profile {
     overflow: hidden;
-    width: 35rem;
+    width: var(--tile-profile-width);
     border-radius: 1.6rem;
     text-align: center;
     background-color: var(--color-white);
@@ -146,7 +161,8 @@ body > main {
 .tile-profile::before {
     content: '';
     display: block;
-    padding-top: calc(140 / 350 * 100%);
+    min-height: calc(var(--tile-profile__picture-size) / 2 + 2rem);
+    padding-top: var(--tile-profile-header-aspec);
     background-image: url(../../images/bg-pattern-card.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -157,10 +173,11 @@ body > main {
     border-radius: 50%;
     width: var(--tile-profile__picture-size);
     height: var(--tile-profile__picture-size);
+    max-width: 100%;
     margin-top: calc(10.8rem / -2);
     margin-right: auto;
     margin-left: auto;
-    border: solid 6px #fff;
+    border: solid 6px #FFF;
 }
 
 .tile-profile__picture img {
@@ -229,9 +246,9 @@ body > main {
 .meta-list {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .meta-list__item {
-    padding-right: .4rem;
-    padding-left: .4rem;
+    padding: 1rem .4rem;
 }
