@@ -154,9 +154,7 @@ body > main {
 .tile-profile__picture {
     overflow: hidden;
     border-radius: 50%;
-    width: 10.8rem;
     width: var(--tile-profile__picture-size);
-    height: 10.8rem;
     height: var(--tile-profile__picture-size);
     margin-top: calc(10.8rem / -2);
     margin-right: auto;
