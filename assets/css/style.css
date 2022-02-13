@@ -10,7 +10,7 @@
 /**
  * Adjust font size for easier px to rem conversion.
  */
-body {
+html {
     font-size: 62.5%;
 }
 
