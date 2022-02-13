@@ -1,0 +1,51 @@
+/**
+ * Adjust box sizing on site.
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/**
+ * Adjust font size for easier px to rem conversion.
+ */
+body {
+    font-size: 62.5%;
+}
+
+/**
+ * Side wide custom properties.
+ */
+:root {
+    --base-width-max-width: 120rem;
+    --base-width-side-margin: 2rem;
+}
+
+/**
+ * Add base width to handle horizontal alignment.
+ */
+.base-width {
+    width: calc(100% - (2 * 2rem));
+    max-width: 120rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@supports (color: var(--color)) {
+    .base-width {
+        width: calc(100% - (2 * var(--base-width-side-margin)));
+        max-width: var(--base-width-max-width);
+    }
+}
+
+/**
+ * Remove annoying empty space below inline-block elements.
+ */
+img,
+[style*='inline-block' i],
+svg,
+canvas,
+picture {
+    vertical-align: middle;
+}
