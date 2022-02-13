@@ -173,6 +173,7 @@ body > main {
     margin-bottom: 1rem;
     font-size: var(--font-size-100);
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .tile-profile__title-meta {
@@ -217,6 +218,7 @@ body > main {
     font-size: var(--font-size-100);
     font-weight: 700;
     letter-spacing: .02em;
+    line-height: 1.2;
     color: var(--color-black);
 }
 
