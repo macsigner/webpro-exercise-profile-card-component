@@ -32,8 +32,54 @@ html {
     --font-size-100: 1.8rem;
 }
 
+/**
+ * Remove annoying empty space below inline-block elements.
+ */
+img,
+[style*='inline-block' i],
+svg,
+canvas,
+picture {
+    vertical-align: middle;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/kumbh-sans-v10-latin/kumbh-sans-v10-latin-regular.woff2') format('woff2'),
+    url('../fonts/kumbh-sans-v10-latin/kumbh-sans-v10-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/kumbh-sans-v10-latin/kumbh-sans-v10-latin-700.woff2') format('woff2'),
+    url('../fonts/kumbh-sans-v10-latin/kumbh-sans-v10-latin-700.woff') format('woff');
+}
+
 body {
-    font: 1.6rem 'Kyumbh Sans';
+    font: 1.6rem 'Kumbh Sans';
 }
 
 /**
