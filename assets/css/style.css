@@ -28,9 +28,11 @@ html {
     --color-primary-desaturated: hsl(229, 23%, 23%);
     --color-secondary: hsl(227, 10%, 46%);
     --color-secondary-neutral: hsl(0, 0%, 59%);
+    --color-rule-default: #E7E7E7;
 
     /* font-sizes */
-    --font-size-90: 1.6rem;
+    --font-size-80: 1.2rem;
+    --font-size-90: 1.5rem;
     --font-size-100: 1.8rem;
 }
 
@@ -188,7 +190,7 @@ body > main {
 
 .tile-profile__title {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .4rem;
     font-size: var(--font-size-100);
     font-weight: 700;
     line-height: 1.2;
@@ -202,29 +204,25 @@ body > main {
 }
 
 .tile-profile__subtitle {
-    margin-top: 1rem;
-    margin-bottom: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     font-size: var(--font-size-90);
     font-weight: 400;
     color: var(--color-secondary-neutral);
 }
 
-.tile-profile__rule {
-    margin-bottom: 2.4rem;
-}
-
 .tile-profile__footer {
-    margin-top: 2.4rem;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-    border-top: solid 1px var(--color-secondary-neutral);
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-top: solid 1px var(--color-rule-default);
 }
 
 /**
  * Meta info module.
  */
 .meta-info {
-    font-size: var(--font-size-90);
+    font-size: var(--font-size-80);
     color: var(--color-secondary);
     letter-spacing: .07em;
 }
@@ -232,7 +230,7 @@ body > main {
 .meta-info__title {
     display: block;
     margin-top: 0;
-    margin-bottom: .2rem;
+    margin-bottom: 0;
     font-size: var(--font-size-100);
     font-weight: 700;
     letter-spacing: .02em;
