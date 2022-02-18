@@ -86,13 +86,13 @@ body {
     font: 1.6rem/1.6 'Kumbh Sans';
     background-color: var(--color-primary);
     background-image: url('../../images/bg-pattern-top.svg'), url('../../images/bg-pattern-bottom.svg');
-    background-position: -28.6rem -45.8rem, calc(100% + 24.8rem) calc(100% + 63.2rem);
+    background-position: left -30.7rem top -48.9rem, right -23.5rem bottom -63.1rem;
     background-repeat: no-repeat;
 }
 
 @media (max-width: 375px) {
     body {
-        background-position: -75rem -66rem, calc(100% + 77rem) calc(100% + 55rem);
+        background-position: left -75rem top -66rem, right -77rem bottom -55rem;
     }
 }
 
