@@ -249,4 +249,5 @@ body > main {
 
 .meta-list__item {
     padding: 1rem .4rem;
+    flex: 0 1 6em;
 }
